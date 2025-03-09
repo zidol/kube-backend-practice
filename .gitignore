@@ -1,30 +1,30 @@
 HELP.md
-.gradle
-build/
-!gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**/build/
-!**/src/test/**/build/
+spring-boot/.gradle
+spring-boot/build/
+spring-boot/!gradle/wrapper/gradle-wrapper.jar
+spring-boot/!**/src/main/**/build/
+spring-boot/!**/src/test/**/build/
 
 ### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
+spring-boot/.apt_generated
+spring-boot/.classpath
+spring-boot/.factorypath
+spring-boot/.project
+spring-boot/.settings
+spring-boot/.springBeans
+spring-boot/.sts4-cache
+spring-boot/bin/
+spring-boot/!**/src/main/**/bin/
+spring-boot/!**/src/test/**/bin/
 
 ### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
+spring-boot/.idea
+spring-boot/*.iws
+spring-boot/*.iml
+spring-boot/*.ipr
+spring-boot/out/
+spring-boot/!**/src/main/**/out/
+spring-boot/!**/src/test/**/out/
 
 ### NetBeans ###
 /nbproject/private/
@@ -35,3 +35,45 @@ out/
 
 ### VS Code ###
 .vscode/
+
+
+# Created by https://www.toptal.com/developers/gitignore/api/nextjs
+# Edit at https://www.toptal.com/developers/gitignore?templates=nextjs
+
+### NextJS ###
+# dependencies
+my-app/node_modules
+my-app/.pnp
+my-app/.pnp.js
+
+# testing
+my-app/coverage
+
+# next.js
+my-app/.next/
+my-app/out/
+
+# production
+my-app/build
+
+# misc
+.DS_Store
+my-app/*.pem
+
+# debug
+my-app/npm-debug.log*
+my-app/yarn-debug.log*
+my-app/yarn-error.log*
+my-app/.pnpm-debug.log*
+
+# local env files
+my-app/.env*.local
+
+# vercel
+my-app/.vercel
+
+# typescript
+my-app/*.tsbuildinfo
+my-app/next-env.d.ts
+
+# End of https://www.toptal.com/developers/gitignore/api/nextjs
