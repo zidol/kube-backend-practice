@@ -3,26 +3,21 @@ kind: Deployment
 
 metadata:
   name: spring-deployment
-
+# Deployment 세부 정보
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
       app: backend-app
-
+  #배포할 Pod의 정의
   template:
     metadata:
-      labels:
+      labels: #파드의 레이블(카테고리라 생각 하면 됨)
         app: backend-app
     spec:
       containers:
         - name: spring-container
-          image: spring-server
+          image: spring-server:1.1
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
-          env:
-            - name: MY_ACCOUNT
-              value: zidol
-            - name: MY_PASSWORD
-              value: pwd1234
