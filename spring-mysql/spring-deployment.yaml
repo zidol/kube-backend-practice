@@ -26,12 +26,30 @@ spec:
             - containerPort: 8080  # 컨테이너에서 사용하는 포트를 명시적으로 표현
           env:
             - name: DB_HOST
-              value: mysql-service # Service의 name만 입력하면 다른 서비스와 통신할 수 있다.
+#              value: mysql-service # Service의 name만 입력하면 다른 서비스와 통신할 수 있다.
+              valueFrom:
+                configMapKeyRef:
+                  name: spring-config
+                  key: db-host
             - name: DB_PORT
-              value: "3306" # 숫자값을 문자로 인식하게 만들기 위해 쌍따옴표 붙여야 한다.
+#              value: "3306" # 숫자값을 문자로 인식하게 만들기 위해 쌍따옴표 붙여야 한다.
+              valueFrom:
+                configMapKeyRef:
+                  name: spring-config
+                  key: db-port
             - name: DB_NAME
-              value: kub-practice
+#              value: kub-practice
+              valueFrom:
+                configMapKeyRef:
+                  name: spring-config
+                  key: db-name
             - name: DB_USERNAME
-              value: root
+              valueFrom:
+                secretKeyRef:
+                  name: spring-secret
+                  key: db-username
             - name: DB_PASSWORD
-              value: password123
+              valueFrom:
+                secretKeyRef:
+                  name: spring-secret
+                  key: db-password
